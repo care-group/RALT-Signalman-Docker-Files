@@ -6,4 +6,4 @@ This repository contains the docker files required to build the containers that 
 * RALT Lorex Stream (```ronsm/ralt-lorex-stream```)
 * RALT Semantic Event Logger (```ronsm/ralt-semantic-event-logger```)
 
-All docker containers here: (https://hub.docker.com/u/ronsm)[https://hub.docker.com/u/ronsm]
+All docker containers here: [https://hub.docker.com/u/ronsm](https://hub.docker.com/u/ronsm)
