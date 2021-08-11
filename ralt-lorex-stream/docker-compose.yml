@@ -5,7 +5,9 @@ services:
     tty: true
     entrypoint: /home/root/start_stream.sh
     image: ronsm/ralt-lorex-stream
-    build: .
+    build:
+      context: .
+      network: host
     volumes:
       - ./shared:/home/sandbox/shared
     environment:
