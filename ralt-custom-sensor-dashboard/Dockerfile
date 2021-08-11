@@ -13,7 +13,6 @@ ENV APACHE_LOG_DIR /var/log/apache2
 WORKDIR /home/root
 RUN mkdir Software
 WORKDIR /home/root/Downloads
-ARG CACHE_DATE=2016-01-01
 RUN git clone https://github.com/care-group/RALT-Custom-Sensor-Dashboard.git
 WORKDIR /home/root/Downloads/RALT-Custom-Sensor-Dashboard
 RUN mv client/* /var/www/html

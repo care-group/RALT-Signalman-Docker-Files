@@ -3,9 +3,11 @@ version: '3'
 services:
   sandbox:
     tty: true
-    entrypoint: /home/root/start_stream.sh
-    image: ronsm/ralt-lorex-stream
-    build: .
+    entrypoint: /home/root/start.sh
+    image: ronsm/ralt-semantic-event-logger
+    build:
+      context: .
+      network: host
     volumes:
       - ./shared:/home/sandbox/shared
     environment:

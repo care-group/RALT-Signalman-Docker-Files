@@ -1,0 +1,347 @@
+---
+sensors:
+  Bathroom Ceiling Light:
+    event: LightEvent
+    logic:
+      predicate: is_lit
+      x: bathroom
+      y: state
+    reports: binary
+    inverted: false
+    record: all
+  Bathroom Motion Sensor 1:
+    event: PressenceEvent
+    logic:
+      predicate: present_in
+      x: human
+      y: bathroom
+    reports: binary
+    inverted: false
+    record: all
+  Bathroom Motion Sensor 2:
+    event: PressenceEvent
+    logic:
+      predicate: present_in
+      x: human
+      y: bathroom
+    reports: binary
+    inverted: false
+    record: all
+  Toilet Occupied:
+    event: ToiletEvent
+    logic:
+      predicate: is_occupied
+      x: toilet
+      y: state
+    reports: binary
+    inverted: false
+    record: all
+  Bed Occupied LHS:
+    event: BedEvent
+    logic:
+      predicate: is_occupied
+      x: bed
+      y: state
+    reports: binary
+    inverted: false
+    record: all
+  Bed Occupied RHS:
+    event: BedEvent
+    logic:
+      predicate: is_occupied
+      x: bed
+      y: state
+    reports: binary
+    inverted: false
+    record: all
+  Bedroom Blinds Control:
+    event: BlindsEvent
+    logic:
+      predicate: isOpen
+      x: Blind
+      y: state
+    reports: numerical_threshold
+    threshold: 50
+    inverted: false
+    record: all
+  Bedroom Ceiling Light:
+    event: LightEvent
+    logic:
+      predicate: is_lit
+      x: bedroom
+      y: state
+    reports: binary
+    inverted: false
+    record: all
+  Bedroom Motion Sensor 1:
+    event: PressenceEvent
+    logic:
+      predicate: present_in
+      x: human
+      y: bedroom
+    reports: binary
+    inverted: false
+    record: all
+  Bedroom Motion Sensor 2:
+    event: PressenceEvent
+    logic:
+      predicate: present_in
+      x: human
+      y: bedroom
+    reports: binary
+    inverted: false
+    record: all
+  Dining Motion Sensor 1:
+    event: PressenceEvent
+    logic:
+      predicate: present_in
+      x: human
+      y: dining
+    reports: binary
+    inverted: false
+    record: all
+  Dining Motion Sensor 2:
+    event: PressenceEvent
+    logic:
+      predicate: present_in
+      x: human
+      y: dining
+    reports: binary
+    inverted: false
+    record: all
+  Lounge Blinds Control:
+    event: BlindsEvent
+    logic:
+      predicate: isOpen
+      x: Blind
+      y: state
+    reports: numerical_threshold
+    threshold: 50
+    inverted: false
+    record: all
+  Lounge Ceiling Light:
+    event: LightEvent
+    logic:
+      predicate: is_lit
+      x: lounge
+      y: state
+    reports: binary
+    inverted: false
+    record: all
+  Lounge Motion Sensor 1:
+    event: PressenceEvent
+    logic:
+      predicate: present_in
+      x: human
+      y: lounge
+    reports: binary
+    inverted: false
+    record: all
+  Sofa Occupied LHS:
+    event: SofaEvent
+    logic:
+      predicate: is_occupied
+      x: sofa
+      y: state
+    reports: binary
+    inverted: true
+    record: all
+  Sofa Occupied RHS:
+    event: SofaEvent
+    logic:
+      predicate: is_occupied
+      x: sofa
+      y: state
+    reports: binary
+    inverted: false
+    record: all
+  Kettle Fullness:
+    event: KettleEvent
+    logic:
+      predicate: is_full
+      x: kettle
+      y: state
+    reports: binary
+    inverted: false
+    record: all
+  Kettle Pressure:
+    event: KettleEvent
+    logic:
+      predicate: is_on_stand
+      x: kettle
+      y: state
+    reports: binary
+    inverted: false
+    record: all
+  Kettle Power:
+    event: KettleEvent
+    logic:
+      predicate: is_on
+      x: kettle
+      y: state
+    reports: energy
+    threshold: 1200
+    inverted: false
+    record: all
+  Kitchen Tap Power:
+    event: TapEvent
+    logic:
+      predicate: is_on
+      x: tap
+      y: state
+    reports: binary
+    inverted: false
+    record: all
+  Kitchen Base Cabinet 1:
+    event: KitchenCabinetEvent
+    logic:
+      predicate: is_open
+      x: cabinet
+      y: state
+    reports: binary
+    inverted: false
+    record: all
+  Kitchen Base Cabinet 2:
+    event: KitchenCabinetEvent
+    logic:
+      predicate: is_open
+      x: cabinet
+      y: state
+    reports: binary
+    inverted: false
+    record: all
+  Kitchen Base Cabinet 3:
+    event: KitchenCabinetEvent
+    logic:
+      predicate: is_open
+      x: cabinet
+      y: state
+    reports: binary
+    inverted: false
+    record: all
+  Kitchen Base Cabinet 4:
+    event: KitchenCabinetEvent
+    logic:
+      predicate: is_open
+      x: cabinet
+      y: state
+    reports: binary
+    inverted: false
+    record: all
+  Kitchen Base Cabinet 5:
+    event: KitchenCabinetEvent
+    logic:
+      predicate: is_open
+      x: cabinet
+      y: state
+    reports: binary
+    inverted: false
+    record: all
+  Kitchen Wall Cabinet 1:
+    event: KitchenCabinetEvent
+    logic:
+      predicate: is_open
+      x: cabinet
+      y: state
+    reports: binary
+    inverted: false
+    record: all
+  Kitchen Wall Cabinet 2:
+    event: KitchenCabinetEvent
+    logic:
+      predicate: is_open
+      x: cabinet
+      y: state
+    reports: binary
+    inverted: false
+    record: all
+  Kitchen Wall Cabinet 3:
+    event: KitchenCabinetEvent
+    logic:
+      predicate: is_open
+      x: cabinet
+      y: state
+    reports: binary
+    inverted: false
+    record: all
+  Kitchen Wall Cabinet 4:
+    event: KitchenCabinetEvent
+    logic:
+      predicate: is_open
+      x: cabinet
+      y: state
+    reports: binary
+    inverted: false
+    record: all
+  Kitchen Wall Cabinet 5:
+    event: KitchenCabinetEvent
+    logic:
+      predicate: is_open
+      x: cabinet
+      y: state
+    reports: binary
+    inverted: false
+    record: all
+  Kitchen Drawer Bottom:
+    event: KitchenDrawerEvent
+    logic:
+      predicate: is_open
+      x: drawer
+      y: state
+    reports: binary
+    inverted: false
+    record: all
+  Kitchen Drawer Middle:
+    event: KitchenDrawerEvent
+    logic:
+      predicate: is_open
+      x: drawer
+      y: state
+    reports: binary
+    inverted: false
+    record: all
+  Kitchen Drawer Top:
+    event: KitchenDrawerEvent
+    logic:
+      predicate: is_open
+      x: drawer
+      y: state
+    reports: binary
+    inverted: false
+    record: all
+  Kitchen Motion Sensor 1:
+    event: PressenceEvent
+    logic:
+      predicate: present_in
+      x: human
+      y: kitchen
+    reports: binary
+    inverted: false
+    record: all
+  Kitchen Motion Sensor 2:
+    event: PressenceEvent
+    logic:
+      predicate: present_in
+      x: human
+      y: kitchen
+    reports: binary
+    inverted: false
+    record: all
+  Kitchen Ceiling Light:
+    event: LightEvent
+    logic:
+      predicate: is_lit
+      x: kitchen
+      y: state
+    reports: binary
+    inverted: false
+    record: all
+  Hall Motion Sensor 1:
+    event: PressenceEvent
+    logic:
+      predicate: present_in
+      x: human
+      y: hall
+    reports: binary
+    inverted: false
+    record: all
