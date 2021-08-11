@@ -4,11 +4,13 @@ services:
   sandbox:
     tty: true
     entrypoint: /home/root/start.sh
-    image: ronsm/ralt-lorex-stream
+    image: ronsm/ralt-apple-watch-publisher
     build:
       context: .
       network: host
     volumes:
       - ./shared:/home/sandbox/shared
     environment:
-      - ROS_MASTER_URI=http://192.168.1.130:11311/
+      - ROS_MASTER_URI=http://ubuntu:11311/
+    ports:
+      - 6000:6000
