@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  sandbox:
+    tty: true
+    entrypoint: /home/root/start_server.sh
+    image: ronsm/ralt-custom-sensor-dashboard
+    build: .
+    volumes:
+      - ./shared:/home/sandbox/shared
+    ports:
+      - 5000:5000
+      - 80:80
