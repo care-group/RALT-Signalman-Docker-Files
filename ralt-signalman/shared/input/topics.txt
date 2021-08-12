@@ -1,0 +1,10 @@
+/apple_watch_publisher, String
+/ralt_semantic_event_publisher, String
+/ch01/ch01_stream, Image
+/ch02/ch02_stream, Image
+/ch03/ch03_stream, Image
+/ch04/ch04_stream, Image
+/ch05/ch05_stream, Image
+/ch06/ch06_stream, Image
+/ch07/ch07_stream, Image
+/ch08/ch08_stream, Image
