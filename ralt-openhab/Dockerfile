@@ -37,5 +37,5 @@ RUN git clone https://github.com/care-group/RALT-OpenHAB-Backup.git
 WORKDIR /home/root/Software/RALT-OpenHAB-Backup
 
 # Copy in the entrypoint script and make it executable
-COPY start.sh /home/root/
+COPY ralt-openhab/start.sh /home/root/
 RUN chmod +x /home/root/start.sh

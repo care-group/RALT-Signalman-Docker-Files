@@ -25,6 +25,7 @@ ENV APACHE_LOG_DIR /var/log/apache2
 WORKDIR /home/root
 RUN mkdir Software
 WORKDIR /home/root/Downloads
+ARG CACHE_DATE=2021-08-11
 RUN git clone https://github.com/care-group/RALT-Custom-Sensor-Dashboard.git
 
 # Move the dependencies into place
@@ -37,7 +38,7 @@ WORKDIR /home/root/Software/server
 RUN pip3 install -r requirements.txt
 
 # Copy in the entrypoint script and make it executable
-COPY start.sh /home/root/
+COPY ralt-signalman-dashboard/start.sh /home/root/
 RUN chmod +x /home/root/start.sh
 
 # Set the Apache2 process to run in the foreground, preventing the container from exiting

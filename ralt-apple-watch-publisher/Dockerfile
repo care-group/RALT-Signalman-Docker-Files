@@ -30,5 +30,5 @@ RUN . /opt/ros/melodic/setup.sh && catkin_init_workspace /home/root/catkin_ws/sr
 RUN . /opt/ros/melodic/setup.sh && cd /home/root/catkin_ws && catkin_make
 
 # Copy in the entrypoint script and make it executable
-COPY start.sh /home/root/
+COPY ralt-apple-watch-publisher/start.sh /home/root/
 RUN chmod +x /home/root/start.sh
