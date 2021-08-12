@@ -6,6 +6,6 @@ This repository contains the docker files required to build the containers that 
 * RALT Lorex Stream (```ronsm/ralt-lorex-stream```)
 * RALT Semantic Event Logger (```ronsm/ralt-semantic-event-logger```)
 * RALT Apple Watch Publisher (```ronsm/ralt-apple-watch-publisher```)
-* RALT Custom Sensor Dashboard (```ronsm/ralt-custom-sensor-dashboard```)
+* RALT Signalman Dashboard (```ronsm/ralt-signalman-dashboard```)
 
 All docker containers here: [https://hub.docker.com/u/ronsm](https://hub.docker.com/u/ronsm)

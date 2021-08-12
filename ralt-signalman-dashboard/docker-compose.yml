@@ -4,7 +4,7 @@ services:
   sandbox:
     tty: true
     entrypoint: /home/root/start.sh
-    image: ronsm/ralt-custom-sensor-dashboard
+    image: ronsm/ralt-signalman-dashboard
     build: .
     volumes:
       - ./shared:/home/sandbox/shared
