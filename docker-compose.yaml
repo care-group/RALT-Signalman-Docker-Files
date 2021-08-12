@@ -17,13 +17,11 @@ services:
     container_name: ralt_openhab
     tty: true
     entrypoint: /home/root/start.sh
+    network_mode: "host"
     image: ronsm/ralt-openhab
     build:
       context: .
       dockerfile: ralt-openhab/Dockerfile
-    ports:
-      - 8080:8080
-      - 8443:8443
     volumes:
       - ./ralt-openhab/shared:/home/sandbox/shared
     environment:
