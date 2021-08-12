@@ -21,6 +21,9 @@ services:
     build:
       context: .
       dockerfile: ralt-openhab/Dockerfile
+    ports:
+      - 8080:8080
+      - 8443:8443
     volumes:
       - ./ralt-openhab/shared:/home/sandbox/shared
     environment:
