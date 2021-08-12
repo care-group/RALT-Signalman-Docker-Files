@@ -17,7 +17,6 @@ services:
     container_name: ralt_openhab
     tty: true
     entrypoint: /home/root/start.sh
-    network_mode: "host"
     image: ronsm/ralt-openhab
     build:
       context: .
