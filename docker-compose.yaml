@@ -13,22 +13,22 @@ services:
     volumes:
       - ./ralt-lorex-stream/shared:/home/sandbox/shared
 
-  ralt_openhab:
-    container_name: ralt_openhab
-    tty: true
-    entrypoint: /home/root/start.sh
-    network_mode: "host"
-    image: ronsm/ralt-openhab
-    build:
-      context: .
-      dockerfile: ralt-openhab/Dockerfile
-    volumes:
-      - ./ralt-openhab/shared:/home/sandbox/shared
-    environment:
-      - OPENHAB_HTTP_PORT=8080
-      - OPENHAB_HTTPS_PORT=8443
-      - USER_ID=9001
-      - GROUP_ID=9001
+#   ralt_openhab:
+#     container_name: ralt_openhab
+#     tty: true
+#     entrypoint: /home/root/start.sh
+#     network_mode: "host"
+#     image: ronsm/ralt-openhab
+#     build:
+#       context: .
+#       dockerfile: ralt-openhab/Dockerfile
+#     volumes:
+#       - ./ralt-openhab/shared:/home/sandbox/shared
+#     environment:
+#       - OPENHAB_HTTP_PORT=8080
+#       - OPENHAB_HTTPS_PORT=8443
+#       - USER_ID=9001
+#       - GROUP_ID=9001
 
   ralt_semantic_event_logger:
     container_name: ralt_semantic_event_logger
