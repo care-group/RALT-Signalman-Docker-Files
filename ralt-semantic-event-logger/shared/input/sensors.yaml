@@ -199,7 +199,7 @@ sensors:
       x: cabinet
       y: state
     reports: binary
-    inverted: false
+    inverted: true
     record: all
   Kitchen Base Cabinet 2:
     event: KitchenCabinetEvent
@@ -208,7 +208,7 @@ sensors:
       x: cabinet
       y: state
     reports: binary
-    inverted: false
+    inverted: true
     record: all
   Kitchen Base Cabinet 3:
     event: KitchenCabinetEvent
@@ -217,7 +217,7 @@ sensors:
       x: cabinet
       y: state
     reports: binary
-    inverted: false
+    inverted: true
     record: all
   Kitchen Base Cabinet 4:
     event: KitchenCabinetEvent
@@ -226,7 +226,7 @@ sensors:
       x: cabinet
       y: state
     reports: binary
-    inverted: false
+    inverted: true
     record: all
   Kitchen Base Cabinet 5:
     event: KitchenCabinetEvent
@@ -235,7 +235,7 @@ sensors:
       x: cabinet
       y: state
     reports: binary
-    inverted: false
+    inverted: true
     record: all
   Kitchen Wall Cabinet 1:
     event: KitchenCabinetEvent
@@ -244,7 +244,7 @@ sensors:
       x: cabinet
       y: state
     reports: binary
-    inverted: false
+    inverted: true
     record: all
   Kitchen Wall Cabinet 2:
     event: KitchenCabinetEvent
@@ -253,7 +253,7 @@ sensors:
       x: cabinet
       y: state
     reports: binary
-    inverted: false
+    inverted: true
     record: all
   Kitchen Wall Cabinet 3:
     event: KitchenCabinetEvent
@@ -262,7 +262,7 @@ sensors:
       x: cabinet
       y: state
     reports: binary
-    inverted: false
+    inverted: true
     record: all
   Kitchen Wall Cabinet 4:
     event: KitchenCabinetEvent
@@ -271,7 +271,7 @@ sensors:
       x: cabinet
       y: state
     reports: binary
-    inverted: false
+    inverted: true
     record: all
   Kitchen Wall Cabinet 5:
     event: KitchenCabinetEvent
@@ -280,7 +280,7 @@ sensors:
       x: cabinet
       y: state
     reports: binary
-    inverted: false
+    inverted: true
     record: all
   Kitchen Drawer Bottom:
     event: KitchenDrawerEvent
@@ -289,7 +289,7 @@ sensors:
       x: drawer
       y: state
     reports: binary
-    inverted: false
+    inverted: true
     record: all
   Kitchen Drawer Middle:
     event: KitchenDrawerEvent
@@ -298,7 +298,7 @@ sensors:
       x: drawer
       y: state
     reports: binary
-    inverted: false
+    inverted: true
     record: all
   Kitchen Drawer Top:
     event: KitchenDrawerEvent
@@ -307,7 +307,7 @@ sensors:
       x: drawer
       y: state
     reports: binary
-    inverted: false
+    inverted: true
     record: all
   Kitchen Motion Sensor 1:
     event: PressenceEvent
