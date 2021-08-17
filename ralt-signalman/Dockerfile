@@ -11,6 +11,7 @@ RUN apt-get install -y python-catkin-tools
 RUN apt-get install -y build-essential 
 RUN apt-get install git
 RUN apt-get install -y python-pip
+RUN apt-get install ros-melodic-compressed-image-transport
 
 # Download our dependencies from GitHub, CACHE_DATE arg can be used to prevent Git caching (e.g. docker-compose up --build-arg CACHE_DATE=now)
 WORKDIR /home/root/Downloads
