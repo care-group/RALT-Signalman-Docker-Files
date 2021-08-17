@@ -1,10 +1,10 @@
-/apple_watch_publisher, String
-/ralt_semantic_event_publisher, String
-/ch01/image_raw, Image
-/ch02/image_raw, Image
-/ch03/image_raw, Image
-/ch04/image_raw, Image
-/ch05/image_raw, Image
-/ch06/image_raw, Image
-/ch07/image_raw, Image
-/ch08/image_raw, Image
+/apple_watch_publisher
+/ralt_semantic_event_publisher
+/ch01/image_raw
+/ch02/image_raw
+/ch03/image_raw
+/ch04/image_raw
+/ch05/image_raw
+/ch06/image_raw
+/ch07/image_raw
+/ch08/image_raw
