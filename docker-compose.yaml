@@ -66,6 +66,18 @@ services:
     volumes:
       - ./ralt-signalman/shared:/home/sandbox/shared
 
+  ralt_signalman_hsr:
+    container_name: ralt_signalman_hsr
+    tty: true
+    entrypoint: /home/root/start.sh
+    network_mode: "host"
+    image: ronsm/ralt-signalman-hsr
+    build:
+      context: .
+      dockerfile: ralt-signalman-hsr/Dockerfile
+    volumes:
+      - ./ralt-signalman/shared:/home/sandbox/shared
+
   ralt_signalman_dashboard:
     container_name: ralt_signalman_dashboard
     tty: true
