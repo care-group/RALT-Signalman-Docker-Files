@@ -192,6 +192,24 @@ sensors:
     reports: binary
     inverted: false
     record: all
+  Oven Door:
+    event: OvenEvent
+    logic:
+      predicate: is_open
+      x: oven
+      y: state
+    reports: binary
+    inverted: true
+    record: all
+  Fridge Door:
+    event: OvenEvent
+    logic:
+      predicate: is_open
+      x: fridge
+      y: state
+    reports: binary
+    inverted: true
+    record: all
   Kitchen Base Cabinet 1:
     event: KitchenCabinetEvent
     logic:
