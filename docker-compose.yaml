@@ -89,3 +89,22 @@ services:
       dockerfile: ralt-signalman-dashboard/Dockerfile
     volumes:
       - ./ralt-signalman-dashboard/shared:/home/sandbox/shared
+
+  ralt_signalman_webcams:
+    container_name: ralt_signalman_webcams
+    tty: true
+    entrypoint: /home/root/start.sh
+    network_mode: "host"
+    image: ronsm/ralt-signalman-webcams
+    build:
+      context: .
+      dockerfile: ralt-signalman-webcams/Dockerfile
+    volumes:
+      - ./ralt-signalman-webcams/shared:/home/sandbox/shared
+    devices:
+      - /dev/video0:/dev/video0
+      - /dev/video1:/dev/video1
+      - /dev/video2:/dev/video2
+      - /dev/video3:/dev/video3
+      - /dev/video4:/dev/video4
+      - /dev/video5:/dev/video5
