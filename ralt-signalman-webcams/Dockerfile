@@ -18,7 +18,7 @@ WORKDIR /home/root/Downloads
 ARG CACHE_DATE=2021-08-11
 RUN git clone https://github.com/care-group/RALT-Signalman-Container-ROS-Deps.git
 WORKDIR /home/root/Downloads/RALT-Signalman-Container-ROS-Deps/ralt_signalman_webcam
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 WORKDIR /home/root/Downloads/RALT-Signalman-Container-ROS-Deps
 
 # Create the catkin workspace directories
