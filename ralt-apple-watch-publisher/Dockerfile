@@ -16,7 +16,6 @@ RUN apt-get install -y python-pip
 WORKDIR /home/root/Downloads
 ARG CACHE_DATE=2021-08-11
 RUN git clone https://github.com/care-group/RALT-Signalman-Container-ROS-Deps.git
-WORKDIR /home/root/Downloads/RALT-Signalman-Container-ROS-Deps
 
 # Install pip dependencies
 WORKDIR /home/root/Downloads/RALT-Signalman-Container-ROS-Deps/ralt_semantic_event_logger/src
@@ -27,6 +26,7 @@ RUN mkdir /home/root/catkin_ws
 RUN mkdir /home/root/catkin_ws/src
 
 # Move the ROS dependencies into place
+WORKDIR /home/root/Downloads/RALT-Signalman-Container-ROS-Deps
 RUN mv apple_watch_publisher /home/root/catkin_ws/src/
 
 # Initialise catkin workspace and catkin_make
