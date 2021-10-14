@@ -1,365 +1,469 @@
 ---
 sensors:
   Bathroom Ceiling Light:
-    event: LightEvent
+    event: ceiling_light_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: is_lit
-      x: bathroom
+      predicate: alter
+      x: ceiling_light
       y: state
     reports: binary
     inverted: false
     record: all
+    ignore_false: false
   Bathroom Motion Sensor 1:
-    event: PressenceEvent
+    event: presence_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: present_in
-      x: human
+      predicate: move
+      x: user
       y: bathroom
     reports: binary
     inverted: false
     record: all
+    ignore_false: false
   Bathroom Motion Sensor 2:
-    event: PressenceEvent
+    event: pressence_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: present_in
-      x: human
+      predicate: move
+      x: user
       y: bathroom
     reports: binary
     inverted: false
     record: all
+    ignore_false: false
   Toilet Occupied:
-    event: ToiletEvent
+    event: toilet_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: is_occupied
+      predicate: alter
       x: toilet
       y: state
     reports: binary
     inverted: false
     record: all
+    ignore_false: false
   Bed Occupied LHS:
-    event: BedEvent
+    event: bed_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: is_occupied
+      predicate: alter
       x: bed
       y: state
     reports: binary
     inverted: false
     record: all
+    ignore_false: false
   Bed Occupied RHS:
-    event: BedEvent
+    event: bed_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: is_occupied
+      predicate: alter
       x: bed
       y: state
     reports: binary
     inverted: false
     record: all
+    ignore_false: false
   Bedroom Blinds Control:
-    event: BlindsEvent
+    event: blind_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: isOpen
-      x: Blind
+      predicate: alter
+      x: blind
       y: state
     reports: numerical_threshold
     threshold: 50
     inverted: false
     record: all
+    ignore_false: false
   Bedroom Ceiling Light:
-    event: LightEvent
+    event: ceiling_light_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: is_lit
-      x: bedroom
+      predicate: alter
+      x: ceiling_light
       y: state
     reports: binary
     inverted: false
     record: all
+    ignore_false: false
+  Bedroom Drawer 1:
+   event: bedroom_drawer_event(e)
+   alt_predicate_when_true: false
+   logic:
+     predicate: alter
+     x: drawer
+     y: state
+   reports: binary
+   inverted: false
+   record: all
+   ignore_false: false
+  Bedroom Drawer 2:
+   event: bedroom_drawer_event(e)
+   alt_predicate_when_true: false
+   logic:
+     predicate: alter
+     x: drawer
+     y: state
+   reports: binary
+   inverted: false
+   record: all
+   ignore_false: false
   Bedroom Motion Sensor 1:
-    event: PressenceEvent
+    event: presence_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: present_in
-      x: human
+      predicate: move
+      x: user
       y: bedroom
     reports: binary
     inverted: false
     record: all
+    ignore_false: false
   Bedroom Motion Sensor 2:
-    event: PressenceEvent
+    event: presence_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: present_in
-      x: human
+      predicate: move
+      x: user
       y: bedroom
     reports: binary
     inverted: false
     record: all
+    ignore_false: false
   Dining Motion Sensor 1:
-    event: PressenceEvent
+    event: presence_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: present_in
-      x: human
+      predicate: move
+      x: user
       y: dining
     reports: binary
     inverted: false
     record: all
+    ignore_false: false
   Dining Motion Sensor 2:
-    event: PressenceEvent
+    event: presence_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: present_in
-      x: human
+      predicate: move
+      x: user
       y: dining
     reports: binary
     inverted: false
     record: all
+    ignore_false: false
   Lounge Blinds Control:
-    event: BlindsEvent
+    event: blind_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: isOpen
-      x: Blind
+      predicate: alter
+      x: blind
       y: state
     reports: numerical_threshold
     threshold: 50
     inverted: false
     record: all
+    ignore_false: false
   Lounge Ceiling Light:
-    event: LightEvent
+    event: ceiling_light_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: is_lit
-      x: lounge
+      predicate: alter
+      x: ceiling_light
       y: state
     reports: binary
     inverted: false
     record: all
+    ignore_false: false
   Lounge Motion Sensor 1:
-    event: PressenceEvent
+    event: presence_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: present_in
-      x: human
+      predicate: move
+      x: user
       y: lounge
     reports: binary
     inverted: false
     record: all
+    ignore_false: false
   Sofa Occupied LHS:
-    event: SofaEvent
+    event: sofa_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: is_occupied
+      predicate: alter
       x: sofa
       y: state
     reports: binary
     inverted: true
     record: all
+    ignore_false: false
   Sofa Occupied RHS:
-    event: SofaEvent
+    event: sofa_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: is_occupied
+      predicate: alter
       x: sofa
       y: state
     reports: binary
     inverted: false
     record: all
-  Kettle Fullness:
-    event: KettleEvent
-    logic:
-      predicate: is_full
-      x: kettle
-      y: state
-    reports: binary
-    inverted: false
-    record: all
+    ignore_false: false
   Kettle Pressure:
-    event: KettleEvent
+    event: kettle_event(e)
+    alt_predicate_when_true: true
     logic:
-      predicate: is_on_stand
-      x: kettle
-      y: state
+      predicate: take
+      alt_predicate: give
+      x: user
+      y: kettle
     reports: binary
     inverted: false
     record: all
-  Kettle Power:
-    event: KettleEvent
+    ignore_false: false
+  Kettle Trigger:
+    event: kettle_event(e)
+    alt_predicate_when_true: true
     logic:
-      predicate: is_on
+      predicate: take
+      alt_predicate: give
+      x: user
+      y: kettle
+    reports: binary
+    inverted: false
+    record: all
+    ignore_false: false
+  Kettle Power:
+    event: kettle_event(e)
+    alt_predicate_when_true: false
+    logic:
+      predicate: alter
       x: kettle
       y: state
     reports: energy
     threshold: 1200
     inverted: false
     record: all
+    ignore_false: false
   Kitchen Tap Power:
-    event: TapEvent
+    event: tap_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: is_on
+      predicate: alter
       x: tap
       y: state
     reports: binary
     inverted: false
     record: all
+    ignore_false: false
   Oven Door:
-    event: OvenEvent
+    event: oven_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: is_open
+      predicate: alter
       x: oven
       y: state
     reports: binary
     inverted: true
     record: all
+    ignore_false: false
   Fridge Door:
-    event: OvenEvent
+    event: fridge_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: is_open
+      predicate: alter
       x: fridge
       y: state
     reports: binary
     inverted: true
     record: all
+    ignore_false: false
   Kitchen Base Cabinet 1:
-    event: KitchenCabinetEvent
+    event: kitchen_cabinet_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: is_open
+      predicate: alter
       x: cabinet
       y: state
     reports: binary
     inverted: true
     record: all
+    ignore_false: false
   Kitchen Base Cabinet 2:
-    event: KitchenCabinetEvent
+    event: kitchen_cabinet_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: is_open
+      predicate: alter
       x: cabinet
       y: state
     reports: binary
     inverted: true
     record: all
+    ignore_false: false
   Kitchen Base Cabinet 3:
-    event: KitchenCabinetEvent
+    event: kitchen_cabinet_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: is_open
+      predicate: alter
       x: cabinet
       y: state
     reports: binary
     inverted: true
     record: all
+    ignore_false: false
   Kitchen Base Cabinet 4:
-    event: KitchenCabinetEvent
+    event: kitchen_cabinet_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: is_open
+      predicate: alter
       x: cabinet
       y: state
     reports: binary
     inverted: true
     record: all
+    ignore_false: false
   Kitchen Base Cabinet 5:
-    event: KitchenCabinetEvent
+    event: kitchen_cabinet_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: is_open
+      predicate: alter
       x: cabinet
       y: state
     reports: binary
     inverted: true
     record: all
+    ignore_false: false
   Kitchen Wall Cabinet 1:
-    event: KitchenCabinetEvent
+    event: kitchen_cabinet_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: is_open
+      predicate: alter
       x: cabinet
       y: state
     reports: binary
     inverted: true
     record: all
+    ignore_false: false
   Kitchen Wall Cabinet 2:
-    event: KitchenCabinetEvent
+    event: kitchen_cabinet_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: is_open
+      predicate: alter
       x: cabinet
       y: state
     reports: binary
     inverted: true
     record: all
+    ignore_false: false
   Kitchen Wall Cabinet 3:
-    event: KitchenCabinetEvent
+    event: kitchen_cabinet_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: is_open
+      predicate: alter
       x: cabinet
       y: state
     reports: binary
     inverted: true
     record: all
+    ignore_false: false
   Kitchen Wall Cabinet 4:
-    event: KitchenCabinetEvent
+    event: kitchen_cabinet_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: is_open
+      predicate: alter
       x: cabinet
       y: state
     reports: binary
     inverted: true
     record: all
+    ignore_false: false
   Kitchen Wall Cabinet 5:
-    event: KitchenCabinetEvent
+    event: kitchen_cabinet_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: is_open
+      predicate: alter
       x: cabinet
       y: state
     reports: binary
     inverted: true
     record: all
+    ignore_false: false
   Kitchen Drawer Bottom:
-    event: KitchenDrawerEvent
+    event: kitchen_drawer_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: is_open
+      predicate: alter
       x: drawer
       y: state
     reports: binary
     inverted: true
     record: all
+    ignore_false: false
   Kitchen Drawer Middle:
-    event: KitchenDrawerEvent
+    event: kitchen_drawer_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: is_open
+      predicate: alter
       x: drawer
       y: state
     reports: binary
     inverted: true
     record: all
+    ignore_false: false
   Kitchen Drawer Top:
-    event: KitchenDrawerEvent
+    event: kitchen_drawer_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: is_open
+      predicate: alter
       x: drawer
       y: state
     reports: binary
     inverted: true
     record: all
+    ignore_false: false
   Kitchen Motion Sensor 1:
-    event: PressenceEvent
+    event: presence_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: present_in
-      x: human
+      predicate: move
+      x: user
       y: kitchen
     reports: binary
     inverted: false
     record: all
+    ignore_false: false
   Kitchen Motion Sensor 2:
-    event: PressenceEvent
+    event: presence_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: present_in
-      x: human
+      predicate: move
+      x: user
       y: kitchen
     reports: binary
     inverted: false
     record: all
+    ignore_false: false
   Kitchen Ceiling Light:
-    event: LightEvent
+    event: ceiling_light_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: is_lit
-      x: kitchen
+      predicate: alter
+      x: ceiling_light
       y: state
     reports: binary
     inverted: false
     record: all
+    ignore_false: false
   Hall Motion Sensor 1:
-    event: PressenceEvent
+    event: presence_event(e)
+    alt_predicate_when_true: false
     logic:
-      predicate: present_in
-      x: human
+      predicate: move
+      x: user
       y: hall
     reports: binary
     inverted: false
     record: all
+    ignore_false: false
