@@ -13,6 +13,85 @@ services:
     volumes:
       - ./ralt-lorex-stream/shared:/home/sandbox/shared
 
+  ralt_semantic_event_logger:
+    container_name: ralt_semantic_event_logger
+    tty: true
+    entrypoint: /home/root/start.sh
+    network_mode: "host"
+    image: ronsm/ralt-semantic-event-logger
+    build:
+      context: .
+      dockerfile: ralt-semantic-event-logger/Dockerfile
+    volumes:
+      - ./ralt-semantic-event-logger/config:/home/sandbox/config
+  
+  ralt_apple_watch_publisher:
+    container_name: ralt_apple_watch_publisher
+    tty: true
+    entrypoint: /home/root/start.sh
+    network_mode: "host"
+    image: ronsm/ralt-apple-watch-publisher
+    build:
+      context: .
+      dockerfile: ralt-apple-watch-publisher/Dockerfile
+    volumes:
+      - ./ralt-signalman/output:/home/sandbox/output
+    
+  ralt_signalman:
+    container_name: ralt_signalman
+    tty: true
+    entrypoint: /home/root/start.sh
+    network_mode: "host"
+    image: ronsm/ralt-signalman
+    build:
+      context: .
+      dockerfile: ralt-signalman/Dockerfile
+    volumes:
+      - ./ralt-signalman/config:/home/sandbox/config
+      - ./ralt-signalman/output:/home/sandbox/output
+
+  ralt_signalman_hsr:
+    container_name: ralt_signalman_hsr
+    tty: true
+    entrypoint: /home/root/start.sh
+    network_mode: "host"
+    image: ronsm/ralt-signalman-hsr
+    build:
+      context: .
+      dockerfile: ralt-signalman-hsr/Dockerfile
+    volumes:
+      - ./ralt-signalman/config:/home/sandbox/config
+      - ./ralt-signalman/output:/home/sandbox/output
+
+  ralt_signalman_dashboard:
+    container_name: ralt_signalman_dashboard
+    tty: true
+    entrypoint: /home/root/start.sh
+    network_mode: "host"
+    image: ronsm/ralt-signalman-dashboard
+    build:
+      context: .
+      dockerfile: ralt-signalman-dashboard/Dockerfile
+
+  ralt_signalman_webcams:
+    container_name: ralt_signalman_webcams
+    tty: true
+    entrypoint: /home/root/start.sh
+    network_mode: "host"
+    image: ronsm/ralt-signalman-webcams
+    build:
+      context: .
+      dockerfile: ralt-signalman-webcams/Dockerfile
+    volumes:
+      - ./ralt-signalman/output:/home/sandbox/output
+    devices:
+      - /dev/video0:/dev/video0
+      - /dev/video1:/dev/video1
+      - /dev/video2:/dev/video2
+      - /dev/video3:/dev/video3
+      - /dev/video4:/dev/video4
+      - /dev/video5:/dev/video5
+
 #   ralt_openhab:
 #     container_name: ralt_openhab
 #     tty: true
@@ -29,82 +108,3 @@ services:
 #       - OPENHAB_HTTPS_PORT=8443
 #       - USER_ID=9001
 #       - GROUP_ID=9001
-
-  ralt_semantic_event_logger:
-    container_name: ralt_semantic_event_logger
-    tty: true
-    entrypoint: /home/root/start.sh
-    network_mode: "host"
-    image: ronsm/ralt-semantic-event-logger
-    build:
-      context: .
-      dockerfile: ralt-semantic-event-logger/Dockerfile
-    volumes:
-      - ./ralt-semantic-event-logger/shared:/home/sandbox/shared
-  
-  ralt_apple_watch_publisher:
-    container_name: ralt_apple_watch_publisher
-    tty: true
-    entrypoint: /home/root/start.sh
-    network_mode: "host"
-    image: ronsm/ralt-apple-watch-publisher
-    build:
-      context: .
-      dockerfile: ralt-apple-watch-publisher/Dockerfile
-    volumes:
-      - ./ralt-apple-watch-publisher/shared:/home/sandbox/shared
-    
-  ralt_signalman:
-    container_name: ralt_signalman
-    tty: true
-    entrypoint: /home/root/start.sh
-    network_mode: "host"
-    image: ronsm/ralt-signalman
-    build:
-      context: .
-      dockerfile: ralt-signalman/Dockerfile
-    volumes:
-      - ./ralt-signalman/shared:/home/sandbox/shared
-
-  ralt_signalman_hsr:
-    container_name: ralt_signalman_hsr
-    tty: true
-    entrypoint: /home/root/start.sh
-    network_mode: "host"
-    image: ronsm/ralt-signalman-hsr
-    build:
-      context: .
-      dockerfile: ralt-signalman-hsr/Dockerfile
-    volumes:
-      - ./ralt-signalman/shared:/home/sandbox/shared
-
-  ralt_signalman_dashboard:
-    container_name: ralt_signalman_dashboard
-    tty: true
-    entrypoint: /home/root/start.sh
-    network_mode: "host"
-    image: ronsm/ralt-signalman-dashboard
-    build:
-      context: .
-      dockerfile: ralt-signalman-dashboard/Dockerfile
-    volumes:
-      - ./ralt-signalman-dashboard/shared:/home/sandbox/shared
-
-  ralt_signalman_webcams:
-    container_name: ralt_signalman_webcams
-    tty: true
-    entrypoint: /home/root/start.sh
-    network_mode: "host"
-    image: ronsm/ralt-signalman-webcams
-    build:
-      context: .
-      dockerfile: ralt-signalman-webcams/Dockerfile
-    volumes:
-      - ./ralt-signalman-webcams/shared:/home/sandbox/shared
-    devices:
-      - /dev/video0:/dev/video0
-      - /dev/video1:/dev/video1
-      - /dev/video2:/dev/video2
-      - /dev/video3:/dev/video3
-      - /dev/video4:/dev/video4
-      - /dev/video5:/dev/video5
