@@ -24,6 +24,7 @@ services:
       dockerfile: ralt-semantic-event-logger/Dockerfile
     volumes:
       - ./ralt-semantic-event-logger/config:/home/sandbox/config
+      - ./ralt-signalman/output:/home/sandbox/output
   
   ralt_apple_watch_publisher:
     container_name: ralt_apple_watch_publisher
