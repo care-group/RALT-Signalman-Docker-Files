@@ -7,7 +7,7 @@ FROM ros:noetic-ros-base
 RUN apt-get update
 
 # Install essentials
-RUN apt-get install -y python-catkin-tools
+RUN apt-get install -y python3-catkin-tools
 RUN apt-get install -y build-essential 
 RUN apt-get install git
 RUN apt-get install -y python-pip
