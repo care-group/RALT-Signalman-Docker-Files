@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-# Starting with ROS Melodic
+# Starting with ROS Noetic
 FROM ros:noetic-ros-base
 
 # Update packages
@@ -28,8 +28,8 @@ RUN mkdir /home/root/catkin_ws/src
 RUN mv ralt_har_mln_basic /home/root/catkin_ws/src/
 
 # Initialise catkin workspace and catkin_make
-RUN . /opt/ros/melodic/setup.sh && catkin_init_workspace /home/root/catkin_ws/src
-RUN . /opt/ros/melodic/setup.sh && cd /home/root/catkin_ws && catkin_make
+RUN . /opt/ros/noetic/setup.sh && catkin_init_workspace /home/root/catkin_ws/src
+RUN . /opt/ros/noetic/setup.sh && cd /home/root/catkin_ws && catkin_make
 
 # Copy in the entrypoint script and make it executable
 COPY ralt-har-mln/start.sh /home/root/
