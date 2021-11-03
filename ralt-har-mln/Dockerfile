@@ -10,7 +10,6 @@ RUN apt-get update
 RUN apt-get install -y python3-catkin-tools
 RUN apt-get install -y build-essential 
 RUN apt-get install -y git
-RUN apt-get install -y python-pip
 RUN apt-get install -y python3-pip
 
 # Download our dependencies from GitHub, CACHE_DATE arg can be used to prevent Git caching (e.g. docker-compose up --build-arg CACHE_DATE=now)
