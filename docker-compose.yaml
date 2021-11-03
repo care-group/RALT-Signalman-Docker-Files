@@ -93,6 +93,16 @@ services:
       - /dev/video4:/dev/video4
       - /dev/video5:/dev/video5
 
+    ralt_har_mln:
+      container_name: ralt_har_mln
+      tty: true
+      entrypoint: /home/root/start.sh
+      network_mode: "host"
+      image: ronsm/ralt-har-mln
+      build:
+        context: .
+        dockerfile: ralt-har-mln/Dockerfile
+
 #   ralt_openhab:
 #     container_name: ralt_openhab
 #     tty: true
