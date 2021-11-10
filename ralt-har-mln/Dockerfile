@@ -27,6 +27,7 @@ RUN mkdir /home/root/catkin_ws/src
 
 # Move the ROS dependencies into place
 RUN mv ralt_har_mln_basic /home/root/catkin_ws/src/
+RUN mv ralt_signalman_messages /home/root/catkin_ws/src
 
 # Initialise catkin workspace and catkin_make
 RUN . /opt/ros/noetic/setup.sh && catkin_init_workspace /home/root/catkin_ws/src
