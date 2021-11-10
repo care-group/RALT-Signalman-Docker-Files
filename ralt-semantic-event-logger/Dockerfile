@@ -26,7 +26,7 @@ RUN mkdir /home/root/catkin_ws/src
 
 # Move the ROS dependencies into place
 RUN mv ralt_semantic_event_logger /home/root/catkin_ws/src/
-RUN mv ralt_signalman_messages /home/root/catkin_ws/src
+RUN mv ralt_signalman_messages /home/root/catkin_ws/src/
 
 # Initialise catkin workspace and catkin_make
 RUN . /opt/ros/melodic/setup.sh && catkin_init_workspace /home/root/catkin_ws/src
