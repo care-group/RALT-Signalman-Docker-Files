@@ -27,7 +27,7 @@ RUN mkdir /home/root/catkin_ws/src
 
 # Move the ROS dependencies into place
 WORKDIR /home/root/Downloads/RALT-Signalman-Container-ROS-Deps
-RUN mv apple_watch_publisher /home/root/catkin_ws/src/
+RUN mv ralt_apple_watch_publisher /home/root/catkin_ws/src/
 
 # Initialise catkin workspace and catkin_make
 RUN . /opt/ros/melodic/setup.sh && catkin_init_workspace /home/root/catkin_ws/src
