@@ -17,7 +17,7 @@ RUN apt-get install -y python3-tk
 WORKDIR /home/root/Downloads
 ARG CACHE_DATE=2021-08-11
 RUN git clone https://github.com/care-group/RALT-Signalman-Container-ROS-Deps.git
-WORKDIR /home/root/Downloads/RALT-Signalman-Container-ROS-Deps/ralt_har_mln_basic/src
+WORKDIR /home/root/Downloads/RALT-Signalman-Container-ROS-Deps/ralt_har_mln/src
 RUN pip3 install -r requirements.txt
 WORKDIR /home/root/Downloads/RALT-Signalman-Container-ROS-Deps
 
@@ -26,7 +26,7 @@ RUN mkdir /home/root/catkin_ws
 RUN mkdir /home/root/catkin_ws/src
 
 # Move the ROS dependencies into place
-RUN mv ralt_har_mln_basic /home/root/catkin_ws/src/
+RUN mv ralt_har_mln /home/root/catkin_ws/src/
 RUN mv ralt_signalman_messages /home/root/catkin_ws/src/
 
 # Initialise catkin workspace and catkin_make
