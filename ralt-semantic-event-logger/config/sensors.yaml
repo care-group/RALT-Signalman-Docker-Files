@@ -1,7 +1,7 @@
 ---
 sensors:
   Bathroom Ceiling Light:
-    event: ceiling_light_event(e)
+    event: Light
     alt_predicate_when_true: false
     logic:
       predicate: alter
@@ -12,7 +12,7 @@ sensors:
     record: all
     ignore_false: false
   Bathroom Motion Sensor 1:
-    event: presence_event(e)
+    event: Presence
     alt_predicate_when_true: false
     logic:
       predicate: move
@@ -23,7 +23,7 @@ sensors:
     record: all
     ignore_false: false
   Bathroom Motion Sensor 2:
-    event: pressence_event(e)
+    event: Presence
     alt_predicate_when_true: false
     logic:
       predicate: move
@@ -34,7 +34,7 @@ sensors:
     record: all
     ignore_false: false
   Toilet Occupied:
-    event: toilet_event(e)
+    event: Toilet
     alt_predicate_when_true: false
     logic:
       predicate: alter
@@ -45,7 +45,7 @@ sensors:
     record: all
     ignore_false: false
   Bed Occupied LHS:
-    event: bed_event(e)
+    event: Bed
     alt_predicate_when_true: false
     logic:
       predicate: alter
@@ -56,7 +56,7 @@ sensors:
     record: all
     ignore_false: false
   Bed Occupied RHS:
-    event: bed_event(e)
+    event: Bed
     alt_predicate_when_true: false
     logic:
       predicate: alter
@@ -67,7 +67,7 @@ sensors:
     record: all
     ignore_false: false
   Bedroom Blinds Control:
-    event: blind_event(e)
+    event: Blind
     alt_predicate_when_true: false
     logic:
       predicate: alter
@@ -79,7 +79,7 @@ sensors:
     record: all
     ignore_false: false
   Bedroom Ceiling Light:
-    event: ceiling_light_event(e)
+    event: Blind
     alt_predicate_when_true: false
     logic:
       predicate: alter
@@ -90,7 +90,7 @@ sensors:
     record: all
     ignore_false: false
   Bedroom Drawer 1:
-   event: bedroom_drawer_event(e)
+   event: ClothesDrawer
    alt_predicate_when_true: false
    logic:
      predicate: alter
@@ -101,7 +101,7 @@ sensors:
    record: all
    ignore_false: false
   Bedroom Drawer 2:
-   event: bedroom_drawer_event(e)
+   event: ClothesDrawer
    alt_predicate_when_true: false
    logic:
      predicate: alter
@@ -111,8 +111,74 @@ sensors:
    inverted: false
    record: all
    ignore_false: false
+  Bedroom Drawer 3:
+   event: ClothesDrawer
+   alt_predicate_when_true: false
+   logic:
+     predicate: alter
+     x: drawer
+     y: state
+   reports: binary
+   inverted: false
+   record: all
+   ignore_false: false
+  Bedroom Drawer 4:
+   event: ClothesDrawer
+   alt_predicate_when_true: false
+   logic:
+     predicate: alter
+     x: drawer
+     y: state
+   reports: binary
+   inverted: false
+   record: all
+   ignore_false: false
+  Bedroom Drawer 5:
+   event: ClothesDrawer
+   alt_predicate_when_true: false
+   logic:
+     predicate: alter
+     x: drawer
+     y: state
+   reports: binary
+   inverted: false
+   record: all
+   ignore_false: false
+  Bedroom Drawer 6:
+   event: ClothesDrawer
+   alt_predicate_when_true: false
+   logic:
+     predicate: alter
+     x: drawer
+     y: state
+   reports: binary
+   inverted: false
+   record: all
+   ignore_false: false
+  Bedroom Wardrobe 1:
+   event: ClothesWardrobe
+   alt_predicate_when_true: false
+   logic:
+     predicate: alter
+     x: wardrobe
+     y: state
+   reports: binary
+   inverted: false
+   record: all
+   ignore_false: false
+  Bedroom Wardrobe 2:
+   event: ClothesWardrobe
+   alt_predicate_when_true: false
+   logic:
+     predicate: alter
+     x: wardrobe
+     y: state
+   reports: binary
+   inverted: false
+   record: all
+   ignore_false: false
   Bedroom Motion Sensor 1:
-    event: presence_event(e)
+    event: Presence
     alt_predicate_when_true: false
     logic:
       predicate: move
@@ -123,7 +189,7 @@ sensors:
     record: all
     ignore_false: false
   Bedroom Motion Sensor 2:
-    event: presence_event(e)
+    event: Presence
     alt_predicate_when_true: false
     logic:
       predicate: move
@@ -134,7 +200,7 @@ sensors:
     record: all
     ignore_false: false
   Dining Motion Sensor 1:
-    event: presence_event(e)
+    event: Presence
     alt_predicate_when_true: false
     logic:
       predicate: move
@@ -145,7 +211,7 @@ sensors:
     record: all
     ignore_false: false
   Dining Motion Sensor 2:
-    event: presence_event(e)
+    event: Presence
     alt_predicate_when_true: false
     logic:
       predicate: move
@@ -156,7 +222,7 @@ sensors:
     record: all
     ignore_false: false
   Lounge Blinds Control:
-    event: blind_event(e)
+    event: Blind
     alt_predicate_when_true: false
     logic:
       predicate: alter
@@ -168,7 +234,7 @@ sensors:
     record: all
     ignore_false: false
   Lounge Ceiling Light:
-    event: ceiling_light_event(e)
+    event: Light
     alt_predicate_when_true: false
     logic:
       predicate: alter
@@ -179,7 +245,7 @@ sensors:
     record: all
     ignore_false: false
   Lounge Motion Sensor 1:
-    event: presence_event(e)
+    event: Presence
     alt_predicate_when_true: false
     logic:
       predicate: move
@@ -190,7 +256,7 @@ sensors:
     record: all
     ignore_false: false
   Sofa Occupied LHS:
-    event: sofa_event(e)
+    event: Sofa
     alt_predicate_when_true: false
     logic:
       predicate: alter
@@ -201,7 +267,7 @@ sensors:
     record: all
     ignore_false: false
   Sofa Occupied RHS:
-    event: sofa_event(e)
+    event: Sofa
     alt_predicate_when_true: false
     logic:
       predicate: alter
@@ -212,7 +278,7 @@ sensors:
     record: all
     ignore_false: false
   Kettle Pressure:
-    event: kettle_event(e)
+    event: Kettle
     alt_predicate_when_true: true
     logic:
       predicate: take
@@ -224,7 +290,7 @@ sensors:
     record: all
     ignore_false: false
   Kettle Trigger:
-    event: kettle_event(e)
+    event: Kettle
     alt_predicate_when_true: true
     logic:
       predicate: take
@@ -236,7 +302,7 @@ sensors:
     record: all
     ignore_false: false
   Kettle Power:
-    event: kettle_event(e)
+    event: Kettle
     alt_predicate_when_true: false
     logic:
       predicate: alter
@@ -248,7 +314,7 @@ sensors:
     record: all
     ignore_false: false
   Kitchen Tap Power:
-    event: tap_event(e)
+    event: Tap
     alt_predicate_when_true: false
     logic:
       predicate: alter
@@ -259,7 +325,7 @@ sensors:
     record: all
     ignore_false: false
   Oven Door:
-    event: oven_event(e)
+    event: Oven
     alt_predicate_when_true: false
     logic:
       predicate: alter
@@ -270,7 +336,7 @@ sensors:
     record: all
     ignore_false: false
   Fridge Door:
-    event: fridge_event(e)
+    event: Fridge
     alt_predicate_when_true: false
     logic:
       predicate: alter
@@ -281,7 +347,7 @@ sensors:
     record: all
     ignore_false: false
   Kitchen Base Cabinet 1:
-    event: kitchen_cabinet_event(e)
+    event: MiscCabinet
     alt_predicate_when_true: false
     logic:
       predicate: alter
@@ -292,7 +358,7 @@ sensors:
     record: all
     ignore_false: false
   Kitchen Base Cabinet 2:
-    event: kitchen_cabinet_event(e)
+    event: MiscCabinet
     alt_predicate_when_true: false
     logic:
       predicate: alter
@@ -303,7 +369,7 @@ sensors:
     record: all
     ignore_false: false
   Kitchen Base Cabinet 3:
-    event: kitchen_cabinet_event(e)
+    event: MiscCabinet
     alt_predicate_when_true: false
     logic:
       predicate: alter
@@ -314,18 +380,18 @@ sensors:
     record: all
     ignore_false: false
   Kitchen Base Cabinet 4:
-    event: kitchen_cabinet_event(e)
+    event: Fridge
     alt_predicate_when_true: false
     logic:
       predicate: alter
-      x: cabinet
+      x: fridge
       y: state
     reports: binary
     inverted: true
     record: all
     ignore_false: false
   Kitchen Base Cabinet 5:
-    event: kitchen_cabinet_event(e)
+    event: MiscCabinet
     alt_predicate_when_true: false
     logic:
       predicate: alter
@@ -336,7 +402,7 @@ sensors:
     record: all
     ignore_false: false
   Kitchen Wall Cabinet 1:
-    event: kitchen_cabinet_event(e)
+    event: DinnerwareCabinet
     alt_predicate_when_true: false
     logic:
       predicate: alter
@@ -347,7 +413,7 @@ sensors:
     record: all
     ignore_false: false
   Kitchen Wall Cabinet 2:
-    event: kitchen_cabinet_event(e)
+    event: DrinkwareCabinet
     alt_predicate_when_true: false
     logic:
       predicate: alter
@@ -358,7 +424,7 @@ sensors:
     record: all
     ignore_false: false
   Kitchen Wall Cabinet 3:
-    event: kitchen_cabinet_event(e)
+    event: FoodCabinet
     alt_predicate_when_true: false
     logic:
       predicate: alter
@@ -369,7 +435,7 @@ sensors:
     record: all
     ignore_false: false
   Kitchen Wall Cabinet 4:
-    event: kitchen_cabinet_event(e)
+    event: FoodCabinet
     alt_predicate_when_true: false
     logic:
       predicate: alter
@@ -380,7 +446,7 @@ sensors:
     record: all
     ignore_false: false
   Kitchen Wall Cabinet 5:
-    event: kitchen_cabinet_event(e)
+    event: MiscCabinet
     alt_predicate_when_true: false
     logic:
       predicate: alter
@@ -391,7 +457,7 @@ sensors:
     record: all
     ignore_false: false
   Kitchen Drawer Bottom:
-    event: kitchen_drawer_event(e)
+    event: MiscDrawer
     alt_predicate_when_true: false
     logic:
       predicate: alter
@@ -402,7 +468,7 @@ sensors:
     record: all
     ignore_false: false
   Kitchen Drawer Middle:
-    event: kitchen_drawer_event(e)
+    event: MiscDrawer
     alt_predicate_when_true: false
     logic:
       predicate: alter
@@ -413,7 +479,7 @@ sensors:
     record: all
     ignore_false: false
   Kitchen Drawer Top:
-    event: kitchen_drawer_event(e)
+    event: CutleryDrawer
     alt_predicate_when_true: false
     logic:
       predicate: alter
@@ -424,7 +490,7 @@ sensors:
     record: all
     ignore_false: false
   Kitchen Motion Sensor 1:
-    event: presence_event(e)
+    event: Presence
     alt_predicate_when_true: false
     logic:
       predicate: move
@@ -435,7 +501,7 @@ sensors:
     record: all
     ignore_false: false
   Kitchen Motion Sensor 2:
-    event: presence_event(e)
+    event: Presence
     alt_predicate_when_true: false
     logic:
       predicate: move
@@ -446,7 +512,7 @@ sensors:
     record: all
     ignore_false: false
   Kitchen Ceiling Light:
-    event: ceiling_light_event(e)
+    event: Light
     alt_predicate_when_true: false
     logic:
       predicate: alter
@@ -457,7 +523,7 @@ sensors:
     record: all
     ignore_false: false
   Hall Motion Sensor 1:
-    event: presence_event(e)
+    event: Presence
     alt_predicate_when_true: false
     logic:
       predicate: move

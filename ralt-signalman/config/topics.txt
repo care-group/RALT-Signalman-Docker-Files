@@ -1,5 +1,7 @@
+/activity_label
+/object_label
 /apple_watch_publisher
-/ralt_semantic_event_publisher
+/ralt_semantic_event_publisher/full
 /ch05/image_raw/compressed
 /ch07/image_raw/compressed
 /ch08/image_raw/compressed
