@@ -44,6 +44,17 @@ sensors:
     inverted: false
     record: all
     ignore_false: false
+  Toilet Lid:
+    event: Toilet
+    alt_predicate_when_true: false
+    logic:
+      predicate: alter
+      x: toilet
+      y: state
+    reports: binary
+    inverted: true
+    record: all
+    ignore_false: false
   Bed Occupied LHS:
     event: Bed
     alt_predicate_when_true: false
@@ -296,6 +307,18 @@ sensors:
       x: sofa
       y: state
     reports: binary
+    inverted: false
+    record: all
+    ignore_false: false
+  Lounge TV Power:
+    event: TV
+    alt_predicate_when_true: false
+    logic:
+      predicate: alter
+      x: TV
+      y: state
+    reports: energy
+    threshold: 30
     inverted: false
     record: all
     ignore_false: false
