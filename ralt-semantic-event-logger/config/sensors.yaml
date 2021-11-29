@@ -221,6 +221,28 @@ sensors:
     inverted: false
     record: all
     ignore_false: false
+  Dining Chair 1 Occupied:
+    event: DiningChair
+    alt_predicate_when_true: false
+    logic:
+      predicate: alter
+      x: dining_chair
+      y: state
+    reports: binary
+    inverted: true
+    record: all
+    ignore_false: false
+  Dining Chair 2 Occupied:
+    event: DiningChair
+    alt_predicate_when_true: false
+    logic:
+      predicate: alter
+      x: dining_chair
+      y: state
+    reports: binary
+    inverted: true
+    record: all
+    ignore_false: false
   Lounge Blinds Control:
     event: Blind
     alt_predicate_when_true: false
