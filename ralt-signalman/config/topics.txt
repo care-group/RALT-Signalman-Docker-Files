@@ -2,7 +2,16 @@
 /object_label
 /apple_watch_publisher
 /ralt_semantic_event_publisher/full
+/ralt_semantic_event_publisher/simple
 /ch05/image_raw/compressed
 /ch07/image_raw/compressed
 /ch08/image_raw/compressed
-/xtion/rgb/image_raw/compressed
+/xtion/rgb/image_rect_color/compressed
+/xtion/depth/image_rect_raw
+/scan
+/hsrb/head_rgbd_sensor/rgb/image_rect_color/compressed
+/hsrb/head_rgbd_sensor/depth_registered/image_rect_raw
+/hsrb/base_scan
+/hsrb/base_pose
+/tf
+/pose2D
