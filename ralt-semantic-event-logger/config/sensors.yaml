@@ -288,6 +288,17 @@ sensors:
     inverted: false
     record: all
     ignore_false: false
+  Lounge Cabinet Top Door:
+    event: LoungeCabinet
+    alt_predicate_when_true: false
+    logic:
+      predicate: alter
+      x: cabinet
+      y: state
+    reports: binary
+    inverted: false
+    record: all
+    ignore_false: false
   Sofa Occupied LHS:
     event: Sofa
     alt_predicate_when_true: false
@@ -369,6 +380,17 @@ sensors:
     inverted: false
     record: all
     ignore_false: false
+  Bin Lid:
+    event: Bin
+    alt_predicate_when_true: false
+    logic:
+      predicate: alter
+      x: user
+      y: state
+    reports: binary
+    inverted: false
+    record: all
+    ignore_false: false
   Oven Door:
     event: Oven
     alt_predicate_when_true: false
@@ -392,7 +414,7 @@ sensors:
     record: all
     ignore_false: false
   Kitchen Base Cabinet 1:
-    event: MiscCabinet
+    event: CleaningCabinet
     alt_predicate_when_true: false
     logic:
       predicate: alter
