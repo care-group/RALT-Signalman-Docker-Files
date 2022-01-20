@@ -19,14 +19,15 @@ ARG CACHE_DATE=2021-08-11
 RUN git clone https://github.com/ronsm/ronsm_robot_har_packages.git
 RUN git clone https://github.com/ronsm/ronsm_messages.git
 WORKDIR /home/root/Downloads/ronsm_robot_har_packages/robot_har_mln/src
+RUN pip3 install colored tabulate portalocker
 RUN pip3 install -r requirements.txt
-WORKDIR /home/root/Downloads/ronsm_robot_har_packages
 
 # Create the catkin workspace directories
 RUN mkdir /home/root/catkin_ws
 RUN mkdir /home/root/catkin_ws/src
 
 # Move the ROS dependencies into place
+WORKDIR /home/root/Downloads/ronsm_robot_har_packages
 RUN mv robot_har_mln /home/root/catkin_ws/src/
 WORKDIR /home/root/Downloads/
 RUN mv ronsm_messages /home/root/catkin_ws/src/
