@@ -38,4 +38,5 @@ RUN . /opt/ros/noetic/setup.sh && cd /home/root/catkin_ws && catkin_make
 
 # Copy in the entrypoint script and make it executable
 COPY robot-har-mln/start.sh /home/root/
+RUN chmod +x /home/root/catkin_ws/src/robot_har_mln/src/*
 RUN chmod +x /home/root/start.sh
