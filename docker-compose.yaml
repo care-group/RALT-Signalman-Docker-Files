@@ -122,14 +122,14 @@ services:
       ROS_IP: ${ROS_IP}
 
   ralt_har_mln:
-    container_name: ralt_har_mln
+    container_name: robot_har_mln
     tty: true
     entrypoint: /home/root/start.sh
     network_mode: "host"
-    image: ronsm/ralt-har-mln
+    image: ronsm/robot_har_mln
     build:
       context: .
-      dockerfile: ralt-har-mln/Dockerfile
+      dockerfile: robot_har_mln/Dockerfile
     environment:
       ROS_MASTER_URI: '${TIAGO_MASTER_URI}'
       ROS_MASTER_HOSTNAME: '${TIAGO_HOSTNAME}'

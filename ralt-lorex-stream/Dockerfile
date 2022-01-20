@@ -13,7 +13,6 @@ RUN apt-get install -y ros-melodic-cv-bridge ros-melodic-image-transport ros-mel
 
 # Download our dependencies from GitHub, CACHE_DATE arg can be used to prevent Git caching (e.g. docker-compose up --build-arg CACHE_DATE=now)
 WORKDIR /home/root/Downloads
-ARG CACHE_DATE=2021-08-11
 RUN git clone https://github.com/care-group/RALT-Signalman-Container-Deps.git
 WORKDIR /home/root/Downloads/RALT-Signalman-Container-Deps
 
