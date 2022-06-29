@@ -1,0 +1,7 @@
+/xtion/rgb/image_rect_color/compressed
+/xtion/rgb/camera_info
+/xtion/depth/image_rect_raw/compressed
+/xtion/depth/camera_info
+/scan
+/tf
+/pose2D

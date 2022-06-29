@@ -1,0 +1,9 @@
+/scan
+/hsrb/head_rgbd_sensor/rgb/image_rect_color/compressed
+/hsrb/head_rgbd_sensor/rgb/camera_info
+/hsrb/head_rgbd_sensor/depth_registered/image_rect_raw/compressed
+/hsrb/head_rgbd_sensor/depth_registered/camera_info
+/hsrb/base_scan
+/hsrb/base_pose
+/tf
+/pose2D
