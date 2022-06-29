@@ -13,8 +13,8 @@ services:
     volumes:
       - ./ralt-lorex-stream/shared:/home/sandbox/shared
     environment:
-      ROS_MASTER_URI: '${TIAGO_MASTER_URI}'
-      ROS_MASTER_HOSTNAME: '${TIAGO_HOSTNAME}'
+      ROS_MASTER_URI: '${HSR_MASTER_URI}'
+      ROS_MASTER_HOSTNAME: '${HSR_HOSTNAME}'
       ROS_IP: ${ROS_IP}
 
   ralt_semantic_event_logger:
@@ -30,8 +30,8 @@ services:
       - ./ralt-semantic-event-logger/config:/home/sandbox/config
       - ./ralt-signalman/output:/home/sandbox/output
     environment:
-      ROS_MASTER_URI: '${TIAGO_MASTER_URI}'
-      ROS_MASTER_HOSTNAME: '${TIAGO_HOSTNAME}'
+      ROS_MASTER_URI: '${HSR_MASTER_URI}'
+      ROS_MASTER_HOSTNAME: '${HSR_HOSTNAME}'
       ROS_IP: ${ROS_IP}
   
   ralt_apple_watch_publisher:
@@ -46,8 +46,8 @@ services:
     volumes:
       - ./ralt-signalman/output:/home/sandbox/output
     environment:
-      ROS_MASTER_URI: '${TIAGO_MASTER_URI}'
-      ROS_MASTER_HOSTNAME: '${TIAGO_HOSTNAME}'
+      ROS_MASTER_URI: '${HSR_MASTER_URI}'
+      ROS_MASTER_HOSTNAME: '${HSR_HOSTNAME}'
       ROS_IP: ${ROS_IP}
     
   ralt_signalman:
@@ -63,25 +63,25 @@ services:
       - ./ralt-signalman/config:/home/sandbox/config
       - ./ralt-signalman/output:/home/sandbox/output
     environment:
-      ROS_MASTER_URI: ${TIAGO_MASTER_URI}
-      ROS_MASTER_HOSTNAME: '${TIAGO_HOSTNAME}'
+      ROS_MASTER_URI: ${HSR_MASTER_URI}
+      ROS_MASTER_HOSTNAME: '${HSR_HOSTNAME}'
       ROS_IP: ${ROS_IP}
 
-  ralt_signalman_hsr:
-    container_name: ralt_signalman_hsr
+  ralt_signalman_secondary:
+    container_name: ralt_signalman_secondary
     tty: true
     entrypoint: /home/root/start.sh
     network_mode: "host"
-    image: ronsm/ralt-signalman-hsr
+    image: ronsm/ralt-signalman-secondary
     build:
       context: .
-      dockerfile: ralt-signalman-hsr/Dockerfile
+      dockerfile: ralt-signalman-secondary/Dockerfile
     volumes:
       - ./ralt-signalman/config:/home/sandbox/config
       - ./ralt-signalman/output:/home/sandbox/output
     environment:
-      ROS_MASTER_URI: '${HSR_MASTER_URI}'
-      ROS_MASTER_HOSTNAME: '${HSR_HOSTNAME}'
+      ROS_MASTER_URI: '${TIAGO_MASTER_URI}'
+      ROS_MASTER_HOSTNAME: '${TIAGO_HOSTNAME}'
       ROS_IP: ${HSR_IP}
 
   ralt_signalman_dashboard:
@@ -94,8 +94,8 @@ services:
       context: .
       dockerfile: ralt-signalman-dashboard/Dockerfile
     environment:
-      ROS_MASTER_URI: '${TIAGO_MASTER_URI}'
-      ROS_MASTER_HOSTNAME: '${TIAGO_HOSTNAME}'
+      ROS_MASTER_URI: '${HSR_MASTER_URI}'
+      ROS_MASTER_HOSTNAME: '${HSR_HOSTNAME}'
       ROS_IP: ${ROS_IP}
 
   ralt_signalman_webcams:
@@ -117,20 +117,20 @@ services:
       - /dev/video4:/dev/video4
       - /dev/video5:/dev/video5
     environment:
-      ROS_MASTER_URI: '${TIAGO_MASTER_URI}'
-      ROS_MASTER_HOSTNAME: '${TIAGO_HOSTNAME}'
+      ROS_MASTER_URI: '${HSR_MASTER_URI}'
+      ROS_MASTER_HOSTNAME: '${HSR_HOSTNAME}'
       ROS_IP: ${ROS_IP}
 
-  robot_har_mln:
-    container_name: robot_har_mln
-    tty: true
-    entrypoint: /home/root/start.sh
-    network_mode: "host"
-    image: ronsm/robot_har_mln
-    build:
-      context: .
-      dockerfile: robot-har-mln/Dockerfile
-    environment:
-      ROS_MASTER_URI: '${TIAGO_MASTER_URI}'
-      ROS_MASTER_HOSTNAME: '${TIAGO_HOSTNAME}'
-      ROS_IP: ${ROS_IP}
+#  robot_har_mln:
+#    container_name: robot_har_mln
+#    tty: true
+#    entrypoint: /home/root/start.sh
+#    network_mode: "host"
+#    image: ronsm/robot_har_mln
+#    build:
+#      context: .
+#      dockerfile: robot-har-mln/Dockerfile
+#    environment:
+#      ROS_MASTER_URI: '${HSR_MASTER_URI}'
+#      ROS_MASTER_HOSTNAME: '${HSR_HOSTNAME}'
+#      ROS_IP: ${ROS_IP}

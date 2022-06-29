@@ -13,6 +13,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get install -y git
 RUN apt-get install -y python3-pip
 RUN apt install -y apache2
+RUN apt install -y php libapache2-mod-php
 
 # Set up Apache2
 ENV APACHE_RUN_DIR /var/lib/apache/runtime
@@ -33,6 +34,7 @@ WORKDIR /home/root/Downloads/RALT-Custom-Sensor-Dashboard
 RUN mv client/* /var/www/html
 RUN mv server /home/root/Software
 WORKDIR /home/root/Software/server
+RUN chown www-data:www-data /var/www/html/labels
 
 # Install Python package dependencies
 RUN pip3 install -r requirements.txt
